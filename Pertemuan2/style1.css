@@ -13,23 +13,48 @@ html, body {
 .container-satu {
     width: 800px;
     margin: 50px auto;
-    background-color: #fff;
+    background-color: #F5F5F5;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
 }
 
 .kolom-utama {
-    flex: 2; /* Larger width for main column */
-    margin-right: 20px; /* Optional: Space between columns and sidebars */
+    flex: 2; 
+    margin-right: 20px; 
+    background-color: #483D8B;
+    text-align: justify;
+
+    h2{
+        text-align: center  ;
+        background-color: #191970;
+        color: azure;
+    }
 }
 
+
 .sidebar-satu {
-    flex: 1; /* Smaller width for sidebar satu */
-    margin-right: 20px; /* Optional: Space between sidebars */
+    flex: 1; 
+    margin-right: 20px; 
+    background-color: #C0C0C0;
+    h3{
+        background-color: #A9A9A9;
+        text-align: center;
+    }
 }
 
 .sidebar-dua {
-    flex: 1; /* Smaller width for sidebar dua */
-    margin-left: auto; /* Push sidebar-dua to the far right */
+    flex: 1; 
+    margin-left: auto;
+    background-color: #C0C0C0; 
+    text-align: center;
+    h3{
+        background-color: #A9A9A9;
+    }
+}
+
+.gambar{
+    width: 140px;
+    float: left;
+    margin-right: 10px;
 }
