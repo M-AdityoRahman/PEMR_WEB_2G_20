@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Form Input Data Pendaki</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Bagian Gambar di Atas -->
+    <div class="header">
+        <img src="bg.png" alt="Header Image">
+    </div>
+
+    <!-- Formulir -->
+    <div class="form-container">
+        <form id="inputForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama">
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" name="alamat"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tanggalLahir">Tanggal Lahir</label>
+                <input type="date" id="tanggalLahir" name="tanggalLahir">
+            </div>
+
+            <div class="form-group">
+                <label>Jenis Kelamin</label>
+                <input type="radio" id="laki" name="jenisKelamin" value="Laki-Laki"> Laki-Laki
+                <input type="radio" id="wanita" name="jenisKelamin" value="Wanita"> Wanita
+            </div>
+
+            <div class="form-group">
+                <label>Hobby</label>
+                <input type="checkbox" id="berenang" name="hobby" value="Berenang"> Berenang
+                <input type="checkbox" id="berlari" name="hobby" value="Berlari"> Berlari
+                <input type="checkbox" id="lain" name="hobby" value="Lain"> Lain-Lain
+            </div>
+
+            <div class="form-group">
+                <label>Pekerjaan</label>
+                <input type="checkbox" id="swasta" name="pekerjaan" value="Swasta"> Swasta
+                <input type="checkbox" id="pns" name="pekerjaan" value="PNS"> PNS
+                <input type="checkbox" id="lainPekerjaan" name="pekerjaan" value="Lain"> Lain-Lain
+            </div>
+            <br>
+            <div class="form-group">
+                <input type="checkbox" id="agree" name="agree"> Check Jika anda akan mengirimkan data ini
+            </div>
+            <button type="submit">Cek!</button>
+        </form>
+    </div>
+
+    <script>
+        function validateForm() {
+            const nama = document.getElementById('nama').value;
+            const alamat = document.getElementById('alamat').value;
+            const tanggalLahir = document.getElementById('tanggalLahir').value;
+            const jenisKelaminLaki = document.getElementById('laki').checked;
+            const jenisKelaminWanita = document.getElementById('wanita').checked;
+            const hobbyBerenang = document.getElementById('berenang').checked;
+            const hobbyBerlari = document.getElementById('berlari').checked;
+            const hobbyLain = document.getElementById('lain').checked;
+            const pekerjaanSwasta = document.getElementById('swasta').checked;
+            const pekerjaanPNS = document.getElementById('pns').checked;
+            const pekerjaanLain = document.getElementById('lainPekerjaan').checked;
+            const agree = document.getElementById('agree').checked;
+
+            if (nama === '') {
+                alert('Nama harus diisi.');
+                return false;
+            }
+
+            if (alamat === '') {
+                alert('Alamat harus diisi.');
+                return false;
+            }
+
+            if (tanggalLahir === '') {
+                alert('Tanggal Lahir harus dipilih.');
+                return false;
+            }
+
+            if (!jenisKelaminLaki && !jenisKelaminWanita) {
+                alert('Jenis kelamin harus dipilih.');
+                return false;
+            }
+
+            if (!hobbyBerenang && !hobbyBerlari && !hobbyLain) {
+                alert('Hobby harus dipilih.');
+                return false;
+            }
+
+            if (!pekerjaanSwasta && !pekerjaanPNS && !pekerjaanLain) {
+                alert('Pekerjaan harus dipilih.');
+                return false;
+            }
+
+            if (!agree) {
+                alert('Anda harus mencentang kotak persetujuan.');
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</body>
+</html>
