@@ -62,4 +62,11 @@ echo "a /= b: $a<br>";
 $a = 10; // Reset nilai a
 $a %= $b;
 echo "a %= b: $a<br><br>";
+
+echo "Identik<br>";
+$hasilIdentik = $a === $b;
+echo "a === b (Identik): " . ($hasilIdentik ? 'true' : 'false') . "<br>";
+$hasilTidakIdentik = $a !== $b;
+echo "a !== b (Tidak Identik): " . ($hasilTidakIdentik ? 'true' : 'false') . "<br>";
+
 ?>
