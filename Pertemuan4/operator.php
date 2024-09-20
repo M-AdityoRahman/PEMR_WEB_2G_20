@@ -67,6 +67,11 @@ echo "Identik<br>";
 $hasilIdentik = $a === $b;
 echo "a === b (Identik): " . ($hasilIdentik ? 'true' : 'false') . "<br>";
 $hasilTidakIdentik = $a !== $b;
-echo "a !== b (Tidak Identik): " . ($hasilTidakIdentik ? 'true' : 'false') . "<br>";
+echo "a !== b (Tidak Identik): " . ($hasilTidakIdentik ? 'true' : 'false') . "<br><br>";
+
+$totalKursi = 45;
+$kursiDiTempati = 28;
+$persenKursiKosong = (($totalKursi - $kursiDiTempati) / $totalKursi) * 100;
+echo "Presentasi kursi kosong adalah " . $persenKursiKosong . "%";
 
 ?>
