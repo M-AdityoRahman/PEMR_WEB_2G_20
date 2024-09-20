@@ -28,5 +28,16 @@ echo "a != b: " . ($hasilTidakSama ? 'true' : 'false') . "<br>";
 echo "a < b: " . ($hasilLebihKecil ? 'true' : 'false') . "<br>";
 echo "a > b: " . ($hasilLebihBesar ? 'true' : 'false') . "<br>";
 echo "a <= b: " . ($hasilLebihKecilSama ? 'true' : 'false') . "<br>";
-echo "a >= b: " . ($hasilLebihBesarSama ? 'true' : 'false') . "<br>";
+echo "a >= b: " . ($hasilLebihBesarSama ? 'true' : 'false') . "<br><br>";
+
+$hasilAnd = $a && $b;
+$hasilOr = $a || $b;
+$hasilNotA = !$a;
+$hasilNotB = !$b;
+
+echo "Logika <br>";
+echo "a && b: " . ($hasilAnd ? 'true' : 'false') . "<br>";
+echo "a || b: " . ($hasilOr ? 'true' : 'false') . "<br>";
+echo "!a: " . ($hasilNotA ? 'true' : 'false') . "<br>";
+echo "!b: " . ($hasilNotB ? 'true' : 'false') . "<br>";
 ?>
