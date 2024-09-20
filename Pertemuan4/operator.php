@@ -39,5 +39,27 @@ echo "Logika <br>";
 echo "a && b: " . ($hasilAnd ? 'true' : 'false') . "<br>";
 echo "a || b: " . ($hasilOr ? 'true' : 'false') . "<br>";
 echo "!a: " . ($hasilNotA ? 'true' : 'false') . "<br>";
-echo "!b: " . ($hasilNotB ? 'true' : 'false') . "<br>";
+echo "!b: " . ($hasilNotB ? 'true' : 'false') . "<br><br>";
+
+$a = 10; // Reset nilai a
+echo "Hasil Operasi Penugasan Aritmatika:<br>";
+
+$a += $b;
+echo "a += b: $a<br>";
+
+$a = 10; // Reset nilai a
+$a -= $b;
+echo "a -= b: $a<br>";
+
+$a = 10; // Reset nilai a
+$a *= $b;
+echo "a *= b: $a<br>";
+
+$a = 10; // Reset nilai a
+$a /= $b;
+echo "a /= b: $a<br>";
+
+$a = 10; // Reset nilai a
+$a %= $b;
+echo "a %= b: $a<br><br>";
 ?>
