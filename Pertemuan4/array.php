@@ -36,4 +36,35 @@ foreach ($karyawanPengalamanLimaTahun as $karyawan) {
 }
 echo "</ul>";
 
+echo "<br><br>";
+
+$daftarNilai = [
+    'Matematika' => [
+        ['Alice', 85],
+        ['Bob', 92],
+        ['Charlie', 78],
+    ],
+    'Fisika' => [
+        ['Alice', 90],
+        ['Bob', 88],
+        ['Charlie', 75],
+    ],
+    'Kimia' => [
+        ['Alice', 92],
+        ['Bob', 80],
+        ['Charlie', 85],
+    ],
+];
+
+$mataKuliah = 'Fisika';
+
+echo "Daftar nilai mahasiswa dalam mata kuliah $mataKuliah: ";
+echo "<table border='1' cellpadding='5' cellspacing='0'>";
+echo "<tr><th>Nama</th><th>Nilai</th></tr>";
+foreach ($daftarNilai[$mataKuliah] as $nilai) {
+    echo "<tr><td>{$nilai[0]}</td><td>{$nilai[1]}</td></tr>";
+}
+
+echo "</table>";
+
 ?>
