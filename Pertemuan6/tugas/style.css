@@ -1,0 +1,42 @@
+#database {
+    display: none;
+}
+
+#flip {
+    padding: 15px;
+    text-align: center;
+    background-color: aquamarine;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    margin: 0 auto; 
+}
+
+#database {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin: 0 auto;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%; 
+    border: 1px solid #ddd;
+}
+
+th, td {
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.rata {
+    text-align: center;
+    font-weight: bold;
+}
