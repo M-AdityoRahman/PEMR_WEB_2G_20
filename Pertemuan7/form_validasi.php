@@ -45,7 +45,15 @@
 
                 if (!valid) {
                     event.preventDefault();
-                }
+                } else {
+                    $.ajax({
+                        url: 'proses_validasi.php',
+                        type: 'POST',
+                        data: $("#myForm").serialize(),
+                        success: function (hasil) {
+                            $("#myForm")[0].reset();
+                            alert(hasil);
+                        }
             })
         })
     </script>
