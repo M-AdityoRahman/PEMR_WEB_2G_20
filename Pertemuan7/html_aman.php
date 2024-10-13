@@ -12,6 +12,11 @@
     <br>
     <br>
     <?php 
-    
+    if(isset($_POST['submit']))
+        if(filter_var($email, FILTER_VALIDATE_EMAIL)){
+            echo "Email valid";
+        }else{
+            echo "Email tidak valid";
+        }
     ?>
 </form>
