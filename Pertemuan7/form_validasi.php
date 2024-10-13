@@ -20,6 +20,10 @@
         <input type="text" id="email" name="email">
         <span id="email-error" style="color: red;"></span><br>
         <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password">
+        <span id="password-error" style="color: red;"></span><br>
+        <br>
 
         <input type="submit" value="Submit">
     </form>
@@ -28,6 +32,7 @@
             $("#myForm").submit(function (event) {
                 var nama = $("#nama").val();
                 var email = $("#email").val();
+                var password = $("#password").val();
                 var valid = true;
 
                 if (nama == "") {
@@ -43,6 +48,13 @@
                     $("#email-error").text("");
                 }
 
+                if (password.length <= 8) {
+                    $("#password-error").text("Password minimal 8 karakter!");
+                    valid = false;
+                } else {
+                    $("#password-error").text("");
+                }
+
                 if (!valid) {
                     event.preventDefault();
                 } else {
@@ -54,6 +66,8 @@
                             $("#myForm")[0].reset();
                             alert(hasil);
                         }
+                    })
+                }
             })
         })
     </script>
