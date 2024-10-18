@@ -1,8 +1,8 @@
 <?php
 if (isset($_POST["submit"])) {
-    $targetDirectory = "uploads/"; // direktori tujuan untuk menyimpan file
-    $targetFile = $targetDirectory . basename($_FILES["myfile"]["name"]);
-    $fileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+    $targetdir = "uploads/"; // direktori tujuan untuk menyimpan file
+    $targetfile = $targetdir . basename($_FILES["myfile"]["name"]);
+    $fileType = strtolower(pathinfo($targetfile, PATHINFO_EXTENSION));
 
     $allowedExtensions = array("jpg", "jpeg", "png", "gif");
     $maxsize = 5 * 1024 * 1024;
